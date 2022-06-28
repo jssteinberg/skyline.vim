@@ -7,7 +7,7 @@ It is a much slimmer alternatives to plugins like [powerline](https://github.com
 The notable features of `skyline.vim` are:
 
 * a dynamic mode module, whose color changes to indicate your editing mode
-* a git branch module, supported by [vim-fugitive](https://github.com/tpope/vim-fugitive) or plugin-less
+* a git branch module, supported by [vim-fugitive](https://github.com/tpope/vim-fugitive) or [vim-gitbranch](https://github.com/itchyny/vim-gitbranch).
 * word and line count modules, perfect Vimmers that are writers
 * show and hide many modules at will with simple `g:skyline*` variables
 
@@ -49,6 +49,8 @@ nvim -u NONE -c "helptags skyline.vim/doc" -c q
 	[ALE](https://github.com/dense-analysis/ale). Defaults to 0.
 
 * `g:skyline_fugitive` Set `let g:skyline_fugitive = 1` to show the branch of your file. Depends on [vim-fugitive](https://github.com/tpope/vim-fugitive). Defaults to 0.
+
+* `g:skyline_gitbranch` Set `let g:skyline_gitbranch = 1` to show the branch of your file. Depends on [vim-gitbranch](https://github.com/itchyny/vim-gitbranch). Defaults to 0.
 
 * `g:skyline_path` Set `let g:skyline_path = 0` if you only want the tail (file name) of the path. Defaults to 1 for full relative path.
 

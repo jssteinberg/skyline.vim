@@ -53,9 +53,6 @@ function! ActiveStatus()
     let l:statusline.='%#Normal#'
 
     " === Git branch ===
-    if g:skyline_gitbranch
-        echo 'g:skyline_gitbranch was changed to g:skyline_fugitive. Please update the setting'
-    endif
     if g:skyline_fugitive
         let l:statusline.='%#Type#'
         " if exists('g:loaded_fugitive')
@@ -63,6 +60,10 @@ function! ActiveStatus()
         " else
         "     let l:statusline.='%(%{skyline#base#GitBranch()}%)'
         " endif
+        let l:statusline.='%#Normal#'
+    elseif g:skyline_gitbranch
+        let l:statusline.='%#Type#'
+        let l:statusline.='%(%{skyline#gitbranch#branch()}%)'
         let l:statusline.='%#Normal#'
     endif
 
